@@ -8,7 +8,7 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
-  background: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg') no-repeat fixed;
+  background: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg') no-repeat fixed !important;
   background-size: cover;
   line-height: 1.5;
   font-weight: 500;
