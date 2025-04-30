@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         content.innerHTML = `
           
-          <button class="terms-button" onclick="window.history.back()">${data.button_text}</button>
+          <button class="terms-button" onclick="window.close()">${data.button_text}</button>
           <div class="terms-container">${data.us_content}</div>
         `;
   
