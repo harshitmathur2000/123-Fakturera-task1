@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>123 Fakturera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://storage.123fakturera.se/public/favicon/shortcut.jpg">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <img src="https://storage.123fakturera.se/public/icons/diamond.png" alt="Logo" class="logo" id="logo">
+    </div>
+
+    <div class="header-right">
+      <nav class="nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#" id="order-link">Order</a></li>
+          <li><a href="#" id="customers-link">Our Customers</a></li>
+          <li><a href="#" id="about-link">About us</a></li>
+          <li><a href="#" id="contact-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="dropdown" id="dropdown">
+        <div class="dropdown-btn" id="dropdownBtn">
+          <span id="selected-language"></span>
+        </div>
+        <div class="dropdown-content" id="dropdownContent">
+          <div id="sv-flag"><span>Svenska</span><img src="https://storage.123fakturere.no/public/flags/SE.png" class="flag" alt="Swedish"></div>
+          <div id="en-flag"><span>English</span><img src="https://storage.123fakturere.no/public/flags/GB.png" class="flag" alt="English"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="content"></main>
+
+  <script src="us.js"></script>
+</body>
+</html>
