@@ -31,7 +31,18 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
 });
-
+const createTable = async () => {
+  const sql = fs.readFileSync(path.join(__dirname, 'db.create_table.sql')).toString();
+  await pool.query(sql);
+  console.log("Database seeded successfully");
+};
+createTable();
+const seedDatabase = async () => {
+  const sql = fs.readFileSync(path.join(__dirname, 'db.seed_data.sql')).toString();
+  await pool.query(sql);
+  console.log("Database seeded successfully");
+};
+seedDatabase();
 
 pool.on('connect', async (client) => {
     try {
