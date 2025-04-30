@@ -70,7 +70,7 @@ app.get('/api/terms', async (req, res) => {
             response[row.key_name] = (lang === 'sv') ? row.swedish_text : row.english_text;
         });
         const result2 = await pool.query("SHOW client_encoding;");
-        console.log("Client encoding is:", result2.rows[0].client_encoding);
+        
         res.json(response);
     } catch (error) {
         console.error(error);
