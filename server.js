@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import express from 'express';
 import path from 'path';
-
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -31,12 +31,7 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
 });
-const createTable = async () => {
-  const sql = fs.readFileSync(path.join(__dirname, 'db.create_table.sql')).toString();
-  await pool.query(sql);
-  console.log("Table create sucessfully");
-};
-createTable();
+
 const seedDatabase = async () => {
   const sql = fs.readFileSync(path.join(__dirname, 'db.seed_data.sql')).toString();
   await pool.query(sql);
