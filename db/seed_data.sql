@@ -1,3 +1,4 @@
+DELETE FROM page_texts;
 SET client_encoding = 'UTF8';
 INSERT INTO page_texts (key_name, english_text, swedish_text) VALUES
 ('terms_title', 'Terms', 'Villkor '),
