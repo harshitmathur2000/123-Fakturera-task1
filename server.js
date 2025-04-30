@@ -33,7 +33,7 @@ const pool = new Pool({
 });
 
 const seedDatabase = async () => {
-  const sql = fs.readFileSync(path.join(__dirname, 'db.seed_data.sql')).toString();
+  const sql = fs.readFileSync(path.join(__dirname, '/db/seed_data.sql')).toString();
   await pool.query(sql);
   console.log("Database seeded successfully");
 };
