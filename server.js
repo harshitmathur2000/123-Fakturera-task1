@@ -34,7 +34,7 @@ const pool = new Pool({
 const createTable = async () => {
   const sql = fs.readFileSync(path.join(__dirname, 'db.create_table.sql')).toString();
   await pool.query(sql);
-  console.log("Database seeded successfully");
+  console.log("Table create sucessfully");
 };
 createTable();
 const seedDatabase = async () => {
