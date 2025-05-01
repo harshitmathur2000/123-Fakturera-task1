@@ -77,11 +77,14 @@ header {
   margin: 4px 0;
 }
 
-
-.nav {
+.nav-container{
   display: flex;
+  gap: 3rem;
+  width: 100%;
+}
+.nav {
   align-items: center;
-  gap: 2rem;
+  
 }
 
 .nav-links {
@@ -234,6 +237,11 @@ header {
     display: block;
     height: 100%;
   }
+  .nav-container{
+    display: block;
+    background: white;
+    width: 100%;
+  }
   .nav-links.active li{
     font-weight: 600;
     padding-top: 1.5rem;
@@ -241,10 +249,11 @@ header {
     padding-left: 2rem;
     padding-right: 2rem;
     color: rgba(0, 0, 0, 0.9);
-    background: white;
+    
     text-decoration: inherit;
     height: 65px;
-    margin: 0;
+    
+    
   }
   .hamburger {
     display: flex;
