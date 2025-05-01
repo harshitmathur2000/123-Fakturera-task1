@@ -80,9 +80,7 @@ header {
 .nav-container{
   display: flex;
   gap: 3rem;
-  width: 304px;
-  height: 325px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  
 }
 .nav {
   align-items: center;
@@ -229,7 +227,10 @@ header {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  .nav-container
+  .nav-container{
+    height: 325px;
+    width: 208px;
+  }
 }
 @media (max-width: 1270px) {
   .logo {
@@ -243,7 +244,9 @@ header {
   .nav-container{
     display: block;
     background: white;
-    width: 208px;
+    width: 304px;
+    height: 325px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   }
   .nav-links.active li{
     font-weight: 600;
