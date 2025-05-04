@@ -15,13 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectedLang = document.getElementById('selected-language');
   const content = document.getElementById('content');
 
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); 
     navLinks.classList.toggle('active');
+    dropdownContent.classList.remove('show');
   });
 
-  dropdownBtn.addEventListener('click', () => {
+  navLinks.addEventListener('click', (e) => e.stopPropagation());
+
+  dropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     dropdownContent.classList.toggle('show');
+    navLinks.classList.remove('active');
   });
+
+  dropdownContent.addEventListener('click', (e) => e.stopPropagation());
+
+  document.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    dropdownContent.classList.remove('show');
+  });
+  
 
   function setSelectedLang(lang) {
     if (lang === 'sv') {
